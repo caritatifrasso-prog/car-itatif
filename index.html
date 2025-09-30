@@ -5,34 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Car'itatif</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
+
   <!-- HEADER -->
   <header>
     <div class="logo-container">
       <img src="logo.png" alt="Logo Car'itatif" class="logo-img">
       <span class="logo-text">Car'itatif</span>
     </div>
+
+    <!-- NAVIGATION -->
     <nav>
       <ul class="menu">
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#pricing">Tarifs</a></li>
         <li><a href="#contact">Nous contacter</a></li>
       </ul>
+      <div class="burger">&#9776;</div>
     </nav>
   </header>
 
-  <!-- ACCUEIL -->
-  <section id="accueil" class="hero">
+  <!-- HERO -->
+  <section id="home" class="hero">
     <h1>Bienvenue à <span>Car'itatif</span></h1>
     <p>Un événement solidaire et unique</p>
     <a href="#contact" class="btn">Participer</a>
   </section>
 
-  <!-- A PROPOS -->
-  <section id="apropos">
+  <!-- ABOUT -->
+  <section id="about">
     <h2>À propos</h2>
     <p>
       Car'itatif est un événement solidaire réunissant passionnés et curieux.
@@ -40,8 +43,8 @@
     </p>
   </section>
 
-  <!-- TARIFS -->
-  <section id="tarifs">
+  <!-- PRICING -->
+  <section id="pricing">
     <h2>Tarifs</h2>
     <div class="grid">
       <div class="card">
@@ -54,7 +57,7 @@
       </div>
       <div class="card">
         <h3>VIP</h3>
-        <p>25€</p>
+        <p>20€</p>
       </div>
     </div>
   </section>
@@ -62,23 +65,46 @@
   <!-- CONTACT -->
   <section id="contact">
     <h2>Nous contacter</h2>
-    <div class="contact-infos">
-      <p><strong>Email :</strong> contact@caritatif.fr</p>
-      <p><strong>Tél :</strong> 01 23 45 67 89</p>
-      <p><strong>Adresse :</strong> Paris, France</p>
+    <div class="contact-container">
+      <form>
+        <input type="text" placeholder="Votre nom" required>
+        <input type="email" placeholder="Votre email" required>
+        <textarea placeholder="Votre message" required></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+
+      <div class="contact-infos">
+        <h3>Informations</h3>
+        <p><strong>Email :</strong> contact@caritatif.fr</p>
+        <p><strong>Tél :</strong> 01 23 45 67 89</p>
+        <p><strong>Adresse :</strong> Paris, France</p>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
-    <div class="socials">
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
+    <p>
+      <a href="#">Mentions légales</a> |
+      <a href="#">Politique de confidentialité</a>
+    </p>
+    <p>
+      <a href="#">Facebook</a> •
+      <a href="#">Instagram</a> •
+      <a href="#">LinkedIn</a> •
       <a href="#">TikTok</a>
-    </div>
-    <p>© 2025 Car'itatif - Tous droits réservés</p>
+    </p>
+    <p>&copy; 2024 Car'itatif</p>
   </footer>
+
+  <script>
+    // MENU BURGER
+    const burger = document.querySelector('.burger');
+    const menu = document.querySelector('.menu');
+
+    burger.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
