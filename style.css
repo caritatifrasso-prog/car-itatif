@@ -67,26 +67,29 @@ nav ul li a:hover {
 
 /* HERO */
 .hero {
-  background: url('banniere.jpg') center/cover no-repeat;
+  background: linear-gradient(to top, #000000, #e50914);
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
+  color: white;
 }
 
 .hero h1 {
   font-size: 3em;
+  margin-bottom: 15px;
 }
 
 .hero h1 span {
-  color: #e60000;
+  color: #ff4444;
 }
 
 .hero p {
-  margin: 15px 0;
+  margin: 15px 0 25px;
+  font-size: 1.2em;
 }
 
 .btn {
   display: inline-block;
-  background: #e60000;
+  background: #e50914;
   color: white;
   padding: 12px 25px;
   border-radius: 5px;
@@ -96,7 +99,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-  background: #b30000;
+  background: #000000;
 }
 
 /* SECTIONS */
