@@ -69,8 +69,8 @@ nav ul li a:hover {
 
 /* HERO */
 .hero {
-  width: 100%;                  /* pleine largeur */
-  min-height: 100vh;             /* pleine hauteur */
+  width: 100%;                  /* prend toute la largeur */
+  min-height: 100vh;            /* pleine hauteur */
   background: linear-gradient(to top, #000000, #e50914);
   display: flex;
   flex-direction: column;
@@ -80,6 +80,7 @@ nav ul li a:hover {
   color: white;
   padding: 20px;
   margin: 0;
+  max-width: 100% !important;   /* empêche tout centrage forcé */
 }
 
 .hero h1 {
@@ -112,12 +113,11 @@ nav ul li a:hover {
   background: #000000;
 }
 
-/* SECTIONS (hors hero) */
 section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
-  background-color: #000;  /* garde le fond noir */
+  background-color: #000;
 }
 
 h2 {
