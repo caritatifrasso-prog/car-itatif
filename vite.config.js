@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // ⚠️ remplace 'ton-utilisateur' et 'ton-repo' par tes infos GitHub
 export default defineConfig({
   plugins: [react()],
-  base: '/ton-repo/', 
+  base: '/car-itatif/', 
 })
 ________________________________________
 3. tailwind.config.cjs
