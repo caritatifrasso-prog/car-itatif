@@ -1,13 +1,87 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Car'itatif</title>
-  </head>
-  <body class="bg-white text-black">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car'itatif</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Car'itatif</div>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#contact">Nous contacter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ACCUEIL -->
+  <section id="accueil" class="hero">
+    <h1>Bienvenue à <span>Car'itatif</span></h1>
+    <p>Un événement solidaire et unique</p>
+    <a href="#contact" class="btn">Participer</a>
+  </section>
+
+  <!-- A PROPOS -->
+  <section id="apropos">
+    <h2>À propos</h2>
+    <p>
+      Car'itatif est un événement solidaire réunissant passionnés et curieux.
+      Vous pouvez modifier ce texte facilement dans index.html.
+    </p>
+  </section>
+
+  <!-- TARIFS -->
+  <section id="tarifs">
+    <h2>Tarifs</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Entrée simple</h3>
+        <p>5€</p>
+      </div>
+      <div class="card">
+        <h3>Pass journée</h3>
+        <p>12€</p>
+      </div>
+      <div class="card">
+        <h3>VIP</h3>
+        <p>25€</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Nous contacter</h2>
+    <form>
+      <input type="text" placeholder="Votre nom" required>
+      <input type="email" placeholder="Votre email" required>
+      <textarea placeholder="Votre message" required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+    <div class="infos">
+      <p>Email : contact@caritatif.fr</p>
+      <p>Tél : 01 23 45 67 89</p>
+      <p>Adresse : Paris, France</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">TikTok</a>
+    </div>
+    <p>© 2025 Car'itatif - Tous droits réservés</p>
+  </footer>
+</body>
 </html>
