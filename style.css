@@ -1,4 +1,4 @@
-/* RESET de base */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +10,8 @@ html, body {
   min-height: 100%;
   background-color: #000;
   color: #fff;
-  overflow-x: hidden;
   font-family: 'Poppins', Arial, sans-serif;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -21,11 +21,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: #000;
+  background: rgba(0,0,0,0.95);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .logo-container {
@@ -75,29 +76,22 @@ nav ul li a:hover {
 .hero {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #000000, #e50914);
+  background: linear-gradient(135deg, #000000, #e50914, #111111);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  color: white;
-  padding: 20px;
-  overflow: hidden;
   position: relative;
+  padding: 20px;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(229,9,20,0.2), transparent 70%);
-  animation: pulse 6s infinite alternate;
-}
-
-@keyframes pulse {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .hero h1 {
@@ -123,7 +117,7 @@ nav ul li a:hover {
   background: #e50914;
   color: white;
   padding: 12px 25px;
-  border-radius: 5px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -132,8 +126,8 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-  background: #000000;
-  box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+  background: #000;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.7);
 }
 
 /* SECTIONS */
@@ -141,9 +135,9 @@ section {
   padding: 70px 20px;
   max-width: 1100px;
   margin: auto;
-  background-color: #000;
 }
 
+/* TITRES */
 h2 {
   text-align: center;
   margin-bottom: 40px;
@@ -152,7 +146,7 @@ h2 {
   letter-spacing: 1px;
 }
 
-/* GALERIE D'IMAGES */
+/* GALERIE */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -170,7 +164,7 @@ h2 {
 
 .gallery-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(229, 9, 20, 0.6);
+  box-shadow: 0 0 25px rgba(229,9,20,0.6);
 }
 
 .gallery-item img {
@@ -185,7 +179,7 @@ h2 {
   transform: scale(1.1);
 }
 
-/* Légende dynamique */
+/* CAPTION */
 .caption {
   position: absolute;
   bottom: 0;
@@ -209,7 +203,7 @@ h2 {
   margin-bottom: 8px;
 }
 
-/* SECTION CONTACT */
+/* CONTACT */
 .contact-container {
   display: flex;
   justify-content: center;
@@ -271,12 +265,11 @@ footer a:hover {
     display: block;
   }
 
-  .grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .contact-infos {
     width: 90%;
+  }
+
+  .hero {
+    padding: 80px 20px;
   }
 }
