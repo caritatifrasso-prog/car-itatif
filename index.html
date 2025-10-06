@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Car'itatif</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+  <meta name="description" content="Car’itatif – Rassemblement automobile solidaire au profit des Restos du Cœur.">
 </head>
 <body>
 
@@ -15,7 +17,6 @@
       <span class="logo-text">Car'itatif</span>
     </div>
 
-    <!-- NAVIGATION -->
     <nav>
       <ul class="menu">
         <li><a href="#home">Accueil</a></li>
@@ -30,51 +31,54 @@
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <h1>Bienvenue à <span>Car'itatif</span></h1>
-    <p>Un événement automobile solidaire et unique en Alsace</p>
-    <a href="#contact" class="btn">Participer</a>
+    <div class="hero-content">
+      <h1>Bienvenue à <span>Car'itatif</span></h1>
+      <p>Un événement automobile <strong>solidaire</strong> et <strong>unique</strong> en Alsace</p>
+      <a href="#contact" class="btn">Participer</a>
+    </div>
   </section>
 
-<section id="about">
-  <h2>À propos</h2>
-  <p class="about-intro">
-    Car’itatif est un rassemblement de voitures d’exception organisé au profit des Restos du Cœur.  
-    Une journée dédiée à la passion automobile, à la solidarité et au partage.
-  </p>
+  <!-- À PROPOS -->
+  <section id="about">
+    <h2>À propos</h2>
+    <p class="about-intro">
+      <strong>Car’itatif</strong> est un rassemblement de voitures d’exception organisé au profit des <strong>Restos du Cœur</strong>.  
+      Une journée dédiée à la passion automobile, à la solidarité et au partage.
+    </p>
 
-  <div class="gallery">
-    <div class="gallery-item">
-      <img src="event1.png" alt="BMW M4 noire sur circuit">
-      <div class="caption">
-        <h3>Passion & Performance</h3>
-        <p>Des véhicules d’exception réunis pour une même cause.</p>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="event1.png" alt="BMW M4 noire sur circuit">
+        <div class="caption">
+          <h3>Passion & Performance</h3>
+          <p>Des véhicules d’exception réunis pour une même cause.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="event2.png" alt="Bugatti en mouvement">
+        <div class="caption">
+          <h3>Solidarité & Émotion</h3>
+          <p>Chaque participation aide les Restos du Cœur.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="event3.png" alt="Porsche GT3 argentée">
+        <div class="caption">
+          <h3>Une Journée Inoubliable</h3>
+          <p>Rencontres, partage et sensations fortes au programme.</p>
+        </div>
       </div>
     </div>
 
-    <div class="gallery-item">
-      <img src="event2.png" alt="Bugatti en mouvement">
-      <div class="caption">
-        <h3>Solidarité & Émotion</h3>
-        <p>Chaque participation aide les Restos du Cœur.</p>
-      </div>
-    </div>
+    <p class="about-end">
+      L’édition précédente a rassemblé des dizaines de véhicules d’exception et des centaines de visiteurs.  
+      Cette année, attendez-vous à encore plus de <strong>surprises</strong>, <strong>d’émotions</strong> et de <strong>solidarité</strong>.
+    </p>
+  </section>
 
-    <div class="gallery-item">
-      <img src="event3.png" alt="Porsche GT3 argentée">
-      <div class="caption">
-        <h3>Une Journée Inoubliable</h3>
-        <p>Rencontres, partage et sensations fortes au programme.</p>
-      </div>
-    </div>
-  </div>
-
-  <p class="about-end">
-    L’édition précédente a rassemblé des dizaines de véhicules d’exception et des centaines de visiteurs.  
-    Cette année, nous promettons encore plus de surprises, d’émotions et de belles causes à soutenir.
-  </p>
-</section>
-
-  <!-- WHY PARTICIPATE -->
+  <!-- POURQUOI PARTICIPER -->
   <section id="why">
     <h2>Pourquoi participer ?</h2>
     <div class="grid why-grid">
@@ -93,21 +97,21 @@
     </div>
   </section>
 
-  <!-- PRICING -->
+  <!-- TARIFS -->
   <section id="pricing">
     <h2>Tarifs</h2>
     <div class="grid">
       <div class="card">
         <h3>Entrée simple</h3>
-        <p>5€</p>
+        <p class="price">5€</p>
       </div>
       <div class="card">
         <h3>Pass journée</h3>
-        <p>12€</p>
+        <p class="price">12€</p>
       </div>
       <div class="card">
         <h3>VIP</h3>
-        <p>20€</p>
+        <p class="price">20€</p>
       </div>
     </div>
   </section>
@@ -118,8 +122,8 @@
     <div class="contact-container">
       <div class="contact-infos">
         <h3>Informations</h3>
-        <p><strong>Email :</strong> caritatif.rasso@gmail.com</p>
-        <p><strong>Tél :</strong> 07 68 50 29 71</p>
+        <p><strong>Email :</strong> <a href="mailto:caritatif.rasso@gmail.com">caritatif.rasso@gmail.com</a></p>
+        <p><strong>Tél :</strong> <a href="tel:0768502971">07 68 50 29 71</a></p>
         <p><strong>Adresse :</strong> Alsace, France</p>
       </div>
     </div>
@@ -139,6 +143,7 @@
     <p>&copy; 2025 Car'itatif - Tous droits réservés</p>
   </footer>
 
+  <!-- SCRIPT -->
   <script>
     // MENU BURGER
     const burger = document.querySelector('.burger');
@@ -146,7 +151,19 @@
     burger.addEventListener('click', () => {
       menu.classList.toggle('show');
     });
-  </script>
 
+    // NAVIGATION SMOOTH + ANIMATION AU SCROLL
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show-section');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('section').forEach((section) => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
