@@ -38,8 +38,22 @@
   <section id="about">
     <h2>À propos</h2>
     <p>
-      Car’itatif est un événement à but caritatif organisé cette année au profit des Restos du Cœur. Il vise à récolter des fonds pour soutenir l’association, tout en rassemblant passionnés et curieux autour d’une cause solidaire.
+      Car’itatif est un événement à but caritatif organisé cette année au profit des Restos du Cœur.
+      Il vise à récolter des fonds pour soutenir l’association, tout en rassemblant passionnés et curieux autour d’une cause solidaire.
     </p>
+
+    <!-- 🖼️ GALERIE D'IMAGES -->
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="event1.jpg" alt="Photo de l'événement 1">
+      </div>
+      <div class="gallery-item">
+        <img src="event2.jpg" alt="Photo de l'événement 2">
+      </div>
+      <div class="gallery-item">
+        <img src="event3.jpg" alt="Photo de l'événement 3">
+      </div>
+    </div>
   </section>
 
   <!-- PRICING -->
@@ -65,7 +79,6 @@
   <section id="contact">
     <h2>Nous contacter</h2>
     <div class="contact-container">
-
       <div class="contact-infos">
         <h3>Informations</h3>
         <p><strong>Email :</strong> caritatif.rasso@gmail.com</p>
@@ -94,7 +107,6 @@
     // MENU BURGER
     const burger = document.querySelector('.burger');
     const menu = document.querySelector('.menu');
-
     burger.addEventListener('click', () => {
       menu.classList.toggle('show');
     });
