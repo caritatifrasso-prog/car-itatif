@@ -1,4 +1,4 @@
-/* RESET de base */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -64,7 +64,7 @@ nav ul li a:hover {
   color: #e50914;
 }
 
-/* menu burger mobile */
+/* MENU BURGER */
 .burger {
   display: none;
   font-size: 1.8rem;
@@ -72,15 +72,15 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* HERO (accueil) - fond plein écran + centrage vertical */
+/* HERO */
 .hero {
-  width: 100vw; /* plein écran */
-  min-height: 100vh; /* toute la hauteur */
+  width: 100vw;
+  min-height: 100vh;
   background: linear-gradient(to top, #000000, #e50914);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* centre verticalement */
+  justify-content: center;
   text-align: center;
   color: white;
   padding: 0 20px;
@@ -89,7 +89,6 @@ nav ul li a:hover {
   position: relative;
 }
 
-/* HERO CONTENT */
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -97,7 +96,6 @@ nav ul li a:hover {
   text-align: center;
 }
 
-/* image voiture */
 .hero img.hero-car {
   width: clamp(150px, 25vw, 300px);
   margin: 10px 0 18px;
@@ -105,7 +103,6 @@ nav ul li a:hover {
   display: block;
 }
 
-/* hero texte */
 .hero h1 {
   font-size: clamp(2rem, 5vw, 4rem);
   margin: 10px 0 12px;
@@ -140,19 +137,12 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* SECTIONS GÉNÉRALES */
+/* SECTIONS */
 section {
   padding: 60px 20px;
   max-width: 1100px;
   margin: auto;
   background-color: #000;
-}
-
-/* ne pas limiter le hero */
-section.hero {
-  max-width: none;
-  margin: 0;
-  padding: 0;
 }
 
 /* titres */
@@ -164,8 +154,8 @@ h2 {
   letter-spacing: 0.5px;
 }
 
-/* ABOUT / INTRO */
-.about-intro {
+/* ABOUT */
+.intro {
   text-align: center;
   max-width: 900px;
   margin: 0 auto 20px;
@@ -174,7 +164,7 @@ h2 {
   font-size: 1.02rem;
 }
 
-/* GALERIE D'IMAGES */
+/* GALERIE */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -208,32 +198,7 @@ h2 {
   transform: scale(1.08);
 }
 
-/* légende */
-.caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 18px;
-  background: linear-gradient(0deg, rgba(0,0,0,0.82), transparent);
-  color: #fff;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-.gallery-item:hover .caption {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.caption h3 {
-  color: #e50914;
-  margin-bottom: 6px;
-  font-size: 1.15rem;
-}
-
-/* WHY / CARDS */
+/* WHY */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -273,6 +238,25 @@ h2 {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 10px;
+}
+
+/* ROUTE ENTRE TARIFS ET CONTACT */
+.fond-route {
+  position: relative;
+  left: -10%;
+  width: 130%;
+  height: 400px;
+  background: url("route.png") center/cover no-repeat;
+  transform: rotate(-8deg);
+  opacity: 0.45;
+  z-index: 0;
+  margin: -100px 0 -100px 0;
+  pointer-events: none;
+}
+
+#pricing, #contact {
+  position: relative;
+  z-index: 1;
 }
 
 /* CONTACT */
@@ -317,13 +301,6 @@ footer a:hover {
   color: #fff;
 }
 
-/* UTILITY */
-.price {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #fff;
-}
-
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   header {
@@ -351,8 +328,6 @@ footer a:hover {
 
   .burger { display: block; }
 
-  header { padding: 12px 16px; }
-
   .hero {
     min-height: 80vh;
     justify-content: center;
@@ -370,25 +345,4 @@ footer a:hover {
   .gallery { gap: 16px; }
   .why-grid { grid-template-columns: 1fr; }
   .grid { flex-direction: column; align-items: center; }
-}
-
-/* FOND : route diagonale en arrière-plan */
-body::before {
-  content: "";
-  position: fixed; /* reste visible même si on scrolle */
-  top: 55%;        /* ajuste pour bien aligner avec tes sections */
-  left: -10%;
-  width: 130%;
-  height: 400px;   /* épaisseur de la route */
-  background: url("route.png") center/cover no-repeat;
-  transform: rotate(-8deg);
-  opacity: 0.45;   /* transparence pour qu’on voie le contenu par-dessus */
-  z-index: 0;
-  pointer-events: none; /* ne gêne pas les clics */
-}
-
-/* Pour garder ton contenu au-dessus */
-header, section, footer {
-  position: relative;
-  z-index: 1;
 }
