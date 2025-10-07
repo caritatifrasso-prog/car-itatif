@@ -371,3 +371,25 @@ footer a:hover {
   .why-grid { grid-template-columns: 1fr; }
   .grid { flex-direction: column; align-items: center; }
 }
+
+/* FOND : route diagonale en arrière-plan */
+body::before {
+  content: "";
+  position: fixed; /* reste visible même si on scrolle */
+  top: 55%;        /* ajuste pour bien aligner avec tes sections */
+  left: -10%;
+  width: 130%;
+  height: 400px;   /* épaisseur de la route */
+  background: url("images/route.png") center/cover no-repeat;
+  transform: rotate(-8deg);
+  opacity: 0.45;   /* transparence pour qu’on voie le contenu par-dessus */
+  z-index: 0;
+  pointer-events: none; /* ne gêne pas les clics */
+}
+
+/* Pour garder ton contenu au-dessus */
+header, section, footer {
+  position: relative;
+  z-index: 1;
+}
+
