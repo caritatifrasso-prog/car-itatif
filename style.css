@@ -76,25 +76,33 @@ nav ul li a:hover {
 .hero {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to top, #000000, #e50914); /* dégradé fixe */
+  background: linear-gradient(to top, #000000, #e50914);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* image proche du haut */
+  justify-content: flex-start;
   text-align: center;
   color: white;
-  padding-top: 15px;   /* environ 1cm visuel */
+  padding-top: 15px;
   padding-bottom: 40px;
   margin: 0;
   overflow: hidden;
   position: relative;
 }
 
+/* HERO CONTENT : centrer l'image et le texte */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centre horizontalement */
+  justify-content: flex-start;
+  text-align: center;
+}
+
 /* image voiture dans le hero */
 .hero img.hero-car {
-  width: clamp(150px, 25vw, 300px); /* responsive */
-  margin-top: 10px;
-  margin-bottom: 18px;
+  width: clamp(150px, 25vw, 300px);
+  margin: 10px 0 18px; /* top 10px, bottom 18px */
   filter: drop-shadow(0 8px 30px rgba(0,0,0,0.6));
   display: block;
 }
