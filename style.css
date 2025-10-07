@@ -380,7 +380,7 @@ body::before {
   left: -10%;
   width: 130%;
   height: 400px;   /* épaisseur de la route */
-  background: url("images/route.png") center/cover no-repeat;
+  background: url("route.png") center/cover no-repeat;
   transform: rotate(-8deg);
   opacity: 0.45;   /* transparence pour qu’on voie le contenu par-dessus */
   z-index: 0;
