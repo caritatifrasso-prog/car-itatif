@@ -393,86 +393,43 @@ header, section, footer {
   z-index: 1;
 }
 
-/* === STYLE PAGE MENTIONS LÉGALES === */
-.legal-header {
-  text-align: center;
-  padding: 60px 20px 20px;
-  background: #f8f8f8;
-  border-bottom: 2px solid #eee;
+/* === THEME SOMBRE POUR LA PAGE MENTIONS === */
+body.mentions-page {
+  background-color: #000;
+  color: #f5f5f5;
 }
 
-.legal-header h1 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.legal-header a {
-  text-decoration: none;
-  color: #0077cc;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.legal-header a:hover {
-  color: #005fa3;
-}
-
-/* Conteneur principal */
 .legal-container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-  line-height: 1.7;
-  color: #333;
+  color: #f5f5f5;
 }
 
-.legal-container h1 {
-  font-size: 1.8rem;
-  margin-top: 50px;
-  color: #111;
-}
-
+.legal-container h1,
 .legal-container h2 {
-  font-size: 1.3rem;
-  margin-top: 30px;
-  color: #222;
-  border-left: 4px solid #0077cc;
-  padding-left: 10px;
-}
-
-.legal-container p,
-.legal-container ul {
-  margin: 10px 0 20px;
-}
-
-.legal-container ul {
-  list-style: disc;
-  padding-left: 40px;
+  color: #ff4c4c; /* rouge cohérent avec ton site */
 }
 
 .legal-container a {
-  color: #0077cc;
+  color: #ff6b6b;
   text-decoration: underline;
 }
 
 .legal-container a:hover {
+  color: #fff;
   text-decoration: none;
 }
 
-footer {
-  text-align: center;
-  padding: 30px 10px;
-  border-top: 1px solid #eee;
-  margin-top: 50px;
-  font-size: 0.9rem;
-  color: #666;
+.legal-container hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin: 40px 0;
 }
 
-footer a {
-  color: #0077cc;
+.legal-header {
+  background: #111;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-footer a:hover {
-  color: #005fa3;
+.legal-header a {
+  color: #ff6b6b;
 }
