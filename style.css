@@ -476,3 +476,27 @@ footer a {
 footer a:hover {
   color: #005fa3;
 }
+/* ===== PACK SPONSORING ===== */
+
+#sponsoring {
+  text-align: center;
+}
+
+#sponsoring .intro {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.sponsoring-container {
+  display: flex;
+  justify-content: center;
+}
+
+.sponsoring-img {
+  width: 600px;
+  max-width: 90%;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(229, 9, 20, 0.35);
+}
